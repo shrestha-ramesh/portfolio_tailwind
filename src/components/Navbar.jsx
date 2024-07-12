@@ -1,5 +1,5 @@
 import { useState } from "react";
-import pic from "../../public/ramesh.jpeg";
+import pic from "../assets/ramesh.jpeg";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoCloseSharp } from "react-icons/io5";
 import { Link } from "react-scroll";

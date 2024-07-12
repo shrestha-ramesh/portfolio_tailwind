@@ -1,9 +1,9 @@
-import java from "../../public/java.png";
-import python from "../../public/html.png";
-import mongoDB from "../../public/javascript.png";
-import express from "../../public/oracle.png";
-import reactjs from "../../public/css.jpg";
-import nodejs from "../../public/spring.png";
+import mongoDB from "../assets/mongodb.jpg";
+import express from "../assets/express.png";
+import reactjs from "../assets/reactjs.png";
+import nodejs from "../assets/node.png";
+import python from "../assets/python.webp";
+import java from "../assets/java.png";
 
 export default function Experience() {
   const cardItems = [

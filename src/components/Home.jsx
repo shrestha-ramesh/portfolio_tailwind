@@ -7,7 +7,7 @@ import { BiLogoSpringBoot } from "react-icons/bi";
 import { FaReact } from "react-icons/fa6";
 import { FaJava } from "react-icons/fa6";
 import { ReactTyped } from "react-typed";
-import pic from "../../public/ramesh.jpeg";
+import pic from "../assets/ramesh.jpeg";
 
 export default function Home() {
   return (
@@ -32,13 +32,13 @@ export default function Home() {
             </div>
             <br />
             <p className="text-sm md:text-lg text-justify">
-              Hello there! 👋 I&apos;m Ramesh, a dedicated Software Developer who&apos;s
-              devoted the last three years mastering Java software development.
-              My passion for solving complex problems and my ability to deliver
-              innovative solutions have been my fuel in this exciting journey.💻
-              As a Software Engineer at Infosys, my role involves working
-              collaboratively with agile teams to develop and deliver
-              micro-frontends and micro-services.
+              Hello there! 👋 I&apos;m Ramesh, a dedicated Software Developer
+              who&apos;s devoted the last three years mastering Java software
+              development. My passion for solving complex problems and my
+              ability to deliver innovative solutions have been my fuel in this
+              exciting journey.💻 As a Software Engineer at Infosys, my role
+              involves working collaboratively with agile teams to develop and
+              deliver micro-frontends and micro-services.
             </p>
             <br />
             {/*social media icons*/}

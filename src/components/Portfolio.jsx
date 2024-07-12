@@ -1,10 +1,15 @@
-import java from "../../public/java.png";
-import python from "../../public/python.webp";
-import mongoDB from "../../public/mongodb.jpg";
-import express from "../../public/express.png";
-import reactjs from "../../public/reactjs.png";
-import nodejs from "../../public/node.png";
-
+// import java from "../assets/java.png";
+// import python from "../assests/python.webp";
+// import mongoDB from "../assests/mongodb.jpg";
+// import express from "../assests/express.png";
+// import reactjs from "../assests/reactjs.png";
+// import nodejs from "../assests/node.png";
+import mongoDB from "../assets/mongodb.jpg";
+import express from "../assets/express.png";
+import reactjs from "../assets/reactjs.png";
+import nodejs from "../assets/node.png";
+import java from "../assets/java.png";
+import python from "../assets/python.webp";
 export default function Portfolio() {
   const cardItems = [
     { id: 1, logo: mongoDB, name: "MongoDB" },
