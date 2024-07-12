@@ -13,9 +13,9 @@ function App() {
       <Home />
       <About />
       <Portfolio />
-      <Experience/>
-      <Contact/>
-      <Footer/>
+      <Experience />
+      <Contact />
+      <Footer />
     </>
   );
 }
