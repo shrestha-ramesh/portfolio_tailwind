@@ -12,7 +12,7 @@ export default function Portfolio() {
           <h1 className="mb-5 text-3xl font-bold">Portfolio</h1>
           <span className="underline font-semibold">Feature Projects</span>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-3 my-5">
-            {portfolioItems.map(({ id, logo, name, sourCodeLink }) => (
+            {portfolioItems.map(({ id, logo, name, sourCodeLink, description }) => (
               <div
                 className="md:w-[300px] md:h-[300px] border-[2px] rounded-lg shadow-lg p-1 cursor-pointer hover:scale-110 duration-300"
                 key={id}
@@ -25,8 +25,7 @@ export default function Portfolio() {
                 <div>
                   <div className="font-bold text-xl mb-2 px-2">{name}</div>
                   <p className="px-2 text-gray-700">
-                    Train to model and analyze the sentence sentiment of the
-                    drama audience after geting feedback.
+                   {description}
                   </p>
                 </div>
                 <div className="justify-around px-6 py-4 space-x-3">

@@ -15,10 +15,11 @@ import maven from "../assets/maven.jpeg";
 import gradle from "../assets/gradle.png";
 
 export const experienceItems = [
-  { id: 2, logo: springboot, name: "SpringBoot" },
-  { id: 3, logo: reactjs, name: "ReactJs" },
-  { id: 4, logo: nodejs, name: "NodeJs" },
-  { id: 5, logo: dynatrace, name: "Dynatrace" },
+  { id: 1, logo: springboot, name: "SpringBoot" },
+  { id: 2, logo: reactjs, name: "ReactJs" },
+  { id: 3, logo: nodejs, name: "NodeJs" },
+  { id: 4, logo: dynatrace, name: "Dynatrace" },
+  { id: 5, logo: gradle, name: "Gradle" },
   { id: 6, logo: java, name: "Java" },
   { id: 7, logo: cosmosDB, name: "CosmosDB" },
   { id: 8, logo: controlM, name: "Contol-M" },
@@ -29,5 +30,4 @@ export const experienceItems = [
   { id: 13, logo: sql, name: "SQL" },
   { id: 14, logo: cdc, name: "CDC" },
   { id: 15, logo: maven, name: "Maven" },
-  { id: 15, logo: gradle, name: "Gradle" },
 ];
