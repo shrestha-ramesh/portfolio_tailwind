@@ -1,7 +1,15 @@
 import { useState } from "react";
 import axios from "./API";
+import Modal from "./Modal";
 
 export default function Contact() {
+  // Define a delay function that waits for N milliseconds
+  const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+  const [openModal, setOpenModal] = useState(false);
+  const [modalStatus, setModalStatus] = useState("");
+  const handleOpenModal = (e) => {
+    setOpenModal(e);
+  };
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -13,13 +21,34 @@ export default function Contact() {
       [e.target.name]: e.target.value,
     });
   };
-  const handleSubmit = (e) => {
+  const isValidEmail = (email) => {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailRegex.test(email);
+  };
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("This is handleSumit");
+    const email = formData.email;
+    const isValid = isValidEmail(email);
+    if (isValid && formData.name != "" && formData.message != "") {
+      setModalStatus("Thank you for your email");
+      handleOpenModal(true);
+      await delay(5000);
+      handleOpenModal(false);
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
+    } else {
+      setModalStatus("Please Enter all the field and valid email");
+      handleOpenModal(true);
+      console.log(false);
+      return;
+    }
     axios
       .post("https://getform.io/f/azyllozb", formData)
       .then((response) => {
-        console.log("Data sent successfully:", response.data);
+        console.log("Data sent successfully:");
       })
       .catch((error) => {
         console.error("Error sending data:", error);
@@ -27,6 +56,7 @@ export default function Contact() {
   };
   return (
     <>
+      {openModal && <Modal modalStatus={modalStatus} />}
       <div
         name="Contact"
         className="max-w-screen-2xl container mx-auto px-4 md:p-20 my-16"
@@ -41,7 +71,7 @@ export default function Contact() {
           >
             <h1 className="text-xl font-semibold mb-4">Send your message</h1>
             <div className="flex flex-col mb-4">
-              <label className="block text-gray-700">FullName</label>
+              <label className="block text-gray-700">Full Name</label>
               <input
                 className="showdow appearance-none border rounded-lg py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 type="text"
