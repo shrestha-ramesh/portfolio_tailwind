@@ -4,7 +4,8 @@ import Footer from "./Footer";
 export default function FeedBack() {
   return (
     <>
-      <Contact /> <Footer />
+      <Contact />
+      <Footer />
     </>
   );
 }
