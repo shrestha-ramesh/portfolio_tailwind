@@ -1,6 +1,6 @@
 import { useState } from "react";
-import axios from "./API";
-import Modal from "./Modal";
+import axios from "../components/API";
+import Modal from "../components/Modal";
 
 export default function Contact() {
   // Define a delay function that waits for N milliseconds
