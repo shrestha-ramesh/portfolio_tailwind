@@ -5,7 +5,6 @@ import { IoCloseSharp } from "react-icons/io5";
 import { Link } from "react-scroll";
 
 export default function Navbar() {
-  Link;
   const [menu, setMenu] = useState(false);
   const navItems = [
     {

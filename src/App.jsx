@@ -1,22 +1,18 @@
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Experience from "./components/Experience";
-import Footer from "./components/Footer";
-import Home from "./components/Home";
-import Navbar from "./components/Navbar";
-import Portfolio from "./components/Portfolio";
+import HomePage from "./pages/HomePage";
+import Detail from "./pages/Detail";
+import { Route, Routes } from "react-router-dom";
+import ProtectedRoute from "./components/ProtectedRoute";
+import Login from "./pages/Login";
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <Home />
-      <About />
-      <Portfolio />
-      <Experience />
-      <Contact />
-      <Footer />
-    </>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/" element={<ProtectedRoute />}>
+        <Route path="detail" element={<Detail />} />
+      </Route>
+    </Routes>
   );
 }
 
