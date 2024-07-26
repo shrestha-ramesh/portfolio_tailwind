@@ -1,4 +1,4 @@
-import { experienceItems } from "./ExperienceItems";
+import { experienceItems } from "../description/ExperienceItems";
 export default function Experience() {
   return (
     <>

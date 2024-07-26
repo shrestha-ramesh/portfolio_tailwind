@@ -1,16 +1,12 @@
-import About from "../components/About";
 import Contact from "../components/Contact";
-import Experience from "../components/Experience";
 import Footer from "../components/Footer";
-import Portfolio from "../components/Portfolio";
 import Intro from "../intro/Intro";
+import Description from "../description/Description";
 export default function HomePage() {
   return (
     <>
       <Intro />
-      <About />
-      <Portfolio />
-      <Experience />
+      <Description />
       <Contact />
       <Footer />
     </>
