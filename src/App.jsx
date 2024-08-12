@@ -1,18 +1,20 @@
 import HomePage from "./pages/HomePage";
 import Detail from "./pages/Detail";
-import { Route, Routes } from "react-router-dom";
-import ProtectedRoute from "./auth/ProtectedRoute";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Login from "./pages/Login";
+import { UserContextProvider } from "./context/UserContextProvider";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/" element={<ProtectedRoute />}>
-        <Route path="detail" element={<Detail />} />
-      </Route>
-    </Routes>
+    <UserContextProvider>
+      <Router>
+        <Routes>
+          <Route path="/homepage" element={<HomePage />} />
+          <Route path="/" element={<Login />} />
+          <Route path="/detail" element={<Detail />} />
+        </Routes>
+      </Router>
+    </UserContextProvider>
   );
 }
 
