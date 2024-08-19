@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function Modal({ modalStatus }) {
   return (
     <>
@@ -13,3 +15,7 @@ export default function Modal({ modalStatus }) {
     </>
   );
 }
+  
+Modal.propTypes = {
+  modalStatus: PropTypes.string.isRequired,
+};
