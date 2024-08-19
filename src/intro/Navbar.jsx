@@ -3,31 +3,10 @@ import pic from "../assets/ramesh.jpeg";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoCloseSharp } from "react-icons/io5";
 import { Link } from "react-scroll";
+import { navItems } from "./NavItems";
 
 export default function Navbar() {
   const [menu, setMenu] = useState(false);
-  const navItems = [
-    {
-      id: 1,
-      text: "Home",
-    },
-    {
-      id: 2,
-      text: "About",
-    },
-    {
-      id: 3,
-      text: "Portfolio",
-    },
-    {
-      id: 4,
-      text: "Experience",
-    },
-    {
-      id: 5,
-      text: "Contact",
-    },
-  ];
   return (
     <>
       <div className="max-w-screen-2xl container max-auto px-4 md:px-20 shadow-md h-16 fixed top-0 left-0 right-0 z-50 bg-white">
