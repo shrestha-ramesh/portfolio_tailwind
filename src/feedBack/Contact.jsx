@@ -48,7 +48,7 @@ export default function Contact() {
     axios
       .post("https://getform.io/f/azyllozb", formData)
       .then((response) => {
-        console.log("Data sent successfully:");
+        console.log("Data sent successfully:",response);
       })
       .catch((error) => {
         console.error("Error sending data:", error);
